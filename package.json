@@ -1,0 +1,26 @@
+{
+  "name": "sed-command-builder-1004",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/kc97ble/sed-command-builder-1004#readme",
+  "bugs": {
+    "url": "https://github.com/kc97ble/sed-command-builder-1004/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kc97ble/sed-command-builder-1004.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "sort-package-json": "sort-package-json"
+  },
+  "devDependencies": {
+    "parcel": "^2.7.0",
+    "postcss": "^8.4.16",
+    "sort-package-json": "^1.57.0",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.8.2"
+  }
+}
