@@ -16,3 +16,6 @@
 5. Install Tailwind.
     - Guide: https://tailwindcss.com/docs/guides/parcel
     - Verification: after this, open http://localhost:1234/ and the text will be formatted.
+6. Install Jquery.
+    - Run: `npm install jquery --save` and `npm install @types/jquery --save-dev`
+    - Verification: import jquery and perform some DOM manipulation.
