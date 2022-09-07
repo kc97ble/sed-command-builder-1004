@@ -2,16 +2,100 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>My First Parcel App</title>
-    <link href="./index.css" rel="stylesheet">
-    <script type="module" src="index.ts"></script>
+  <meta charset="utf-8" />
+  <title>My First Parcel App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./index.css" rel="stylesheet">
+  <script type="module" src="index.ts"></script>
 </head>
 
 <body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+  <div class="container mx-auto sm:my-8 bg-white sm:shadow p-4 sm:rounded">
+    <h1 class="text-2xl font-bold mb-4">sed command builder</h1>
+    <form id="f-sedd-1759">
+      <h2 class="text-lg font-bold">For each line from the input, if the following condition is true, ...</h2>
+      <fieldset class="border rounded p-2">
+        <legend>Condition</legend>
+        <div class="block my-2">
+          <input class="mt-1" type="radio" id="c-alwt-1426" name="condition" value="all">
+          <label class="ml-3" for="c-alwt-1426">Always true</label>
+        </div>
+        <div class="block my-2">
+          <input class="mt-1" type="radio" id="c-clni-1430" name="condition" value="single">
+          <label class="ml-3" for="c-clni-1430">The current line number is</label>
+          <input class="border rounded mx-1 w-12" type="text">
+        </div>
+        <div class="block my-2">
+          <input class="mt-1" type="radio" id="c-clnb-1435" name="condition" value="range">
+          <label class="ml-3" for="c-clnb-1435">The current line number is between</label>
+          <input class="border rounded mx-1 w-12" type="text">
+          <span>and</span>
+          <input class="border rounded mx-1 w-12" type="text">
+        </div>
+        <div class="block my-2">
+          <input class="mt-1" type="radio" id="c-cmrg-1439" name="condition" value="regex">
+          <label class="ml-3" for="c-cmrg-1439">The current line matches the regex</label>
+          <input class="border rounded mx-1 w-80" type="text">
+        </div>
+        <div class="block my-2">
+          <input class="mt-1" type="radio" id="c-cstm-1440" name="condition" value="custom">
+          <label class="ml-3" for="c-cstm-1440">Custom</label>
+          <input class="border rounded mx-1 w-80" type="text">
+        </div>
+      </fieldset>
+      <h2 class="mt-4 text-lg font-bold">... then execute the following command.</h2>
+      <fieldset class="border rounded p-2">
+        <legend>Command</legend>
+        <div class="block my-2">
+          <input class="mt-1" type="radio" id="m-noop-1726" name="command" value="none">
+          <label class="ml-3" for="m-noop-1726">Do nothing</label>
+        </div>
+        <div class="block my-2">
+          <input class="mt-1" type="radio" id="m-inbf-1713" name="command" value="prepend">
+          <label class="ml-3" for="m-inbf-1713">Before the current line, insert the following line</label>
+          <input type="text" class="border rounded mx-1 w-80">
+        </div>
+        <div class="block my-2">
+          <input class="mt-1" type="radio" id="m-inaf-1717" name="command" value="append">
+          <label class="ml-3" for="m-inaf-1717">After the current line, insert the following line</label>
+          <input type="text" class="border rounded mx-1 w-80">
+        </div>
+        <div class="block my-2">
+          <input class="mt-1" type="radio" id="m-chng-1718" name="command" value="change">
+          <label class="ml-3" for="m-chng-1718">Change the current line to the following line</label>
+          <input type="text" class="border rounded mx-1 w-80">
+        </div>
+        <div class="block my-2">
+          <input class="mt-1" type="radio" id="m-delt-1720" name="command" value="delete">
+          <label class="ml-3" for="m-delt-1720">Delete the current line</label>
+        </div>
+        <div class="block my-2">
+          <input class="mt-1" type="radio" id="m-repl-1721" name="command" value="replace">
+          <label class="ml-3" for="m-repl-1721">Replace</label>
+          <input type="text" class="border rounded mx-1 w-40">
+          <span>(regex) by</span>
+          <input type="text" class="border rounded mx-1 w-40">
+          <span>using flags</span>
+          <input type="text" class="border rounded mx-1 w-20">
+        </div>
+        <div class="block my-2">
+          <input class="mt-1" type="radio" id="m-tran-1724" name="command" value="translate">
+          <label class="ml-3" for="m-tran-1724">Translate the characters</label>
+          <input type="text" class="border rounded mx-1 w-40">
+          <span>to the characters</span>
+          <input type="text" class="border rounded mx-1 w-40">
+        </div>
+      </fieldset>
+      <button type="button" class="button bg-blue-600 text-white font-bold rounded px-4 py-2 my-4">Get sed
+        command</button>
+    </form>
+    <div>
+      <h2 class="mt-4 text-lg font-bold">Result</h2>
+      <p>
+      <pre style="min-height: 50px" id="p-rslt-1803"></pre>
+      </p>
+    </div>
+  </div>
 </body>
 
 </html>
