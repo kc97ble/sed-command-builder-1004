@@ -23,24 +23,19 @@
         <div class="block my-2">
           <input class="mt-1" type="radio" id="c-clni-1430" name="condition" value="single">
           <label class="ml-3" for="c-clni-1430">The current line number is</label>
-          <input class="border rounded mx-1 w-12" type="text">
+          <input class="border rounded mx-1 w-12" type="text" name="c-single-arg0">
         </div>
         <div class="block my-2">
           <input class="mt-1" type="radio" id="c-clnb-1435" name="condition" value="range">
           <label class="ml-3" for="c-clnb-1435">The current line number is between</label>
-          <input class="border rounded mx-1 w-12" type="text">
+          <input class="border rounded mx-1 w-12" type="text" name="c-range-arg0">
           <span>and</span>
-          <input class="border rounded mx-1 w-12" type="text">
-        </div>
-        <div class="block my-2">
-          <input class="mt-1" type="radio" id="c-cmrg-1439" name="condition" value="regex">
-          <label class="ml-3" for="c-cmrg-1439">The current line matches the regex</label>
-          <input class="border rounded mx-1 w-80" type="text">
+          <input class="border rounded mx-1 w-12" type="text" name="c-range-arg1">
         </div>
         <div class="block my-2">
           <input class="mt-1" type="radio" id="c-cstm-1440" name="condition" value="custom">
           <label class="ml-3" for="c-cstm-1440">Custom</label>
-          <input class="border rounded mx-1 w-80" type="text">
+          <input class="border rounded mx-1 w-80" type="text" name="c-custom-arg0">
         </div>
       </fieldset>
       <h2 class="mt-4 text-lg font-bold">... then execute the following command.</h2>
@@ -53,17 +48,17 @@
         <div class="block my-2">
           <input class="mt-1" type="radio" id="m-inbf-1713" name="command" value="prepend">
           <label class="ml-3" for="m-inbf-1713">Before the current line, insert the following line</label>
-          <input type="text" class="border rounded mx-1 w-80">
+          <input type="text" class="border rounded mx-1 w-80" name="m-prepend-arg0">
         </div>
         <div class="block my-2">
           <input class="mt-1" type="radio" id="m-inaf-1717" name="command" value="append">
           <label class="ml-3" for="m-inaf-1717">After the current line, insert the following line</label>
-          <input type="text" class="border rounded mx-1 w-80">
+          <input type="text" class="border rounded mx-1 w-80" name="m-append-arg0">
         </div>
         <div class="block my-2">
           <input class="mt-1" type="radio" id="m-chng-1718" name="command" value="change">
           <label class="ml-3" for="m-chng-1718">Change the current line to the following line</label>
-          <input type="text" class="border rounded mx-1 w-80">
+          <input type="text" class="border rounded mx-1 w-80" name="m-change-arg0">
         </div>
         <div class="block my-2">
           <input class="mt-1" type="radio" id="m-delt-1720" name="command" value="delete">
@@ -72,21 +67,33 @@
         <div class="block my-2">
           <input class="mt-1" type="radio" id="m-repl-1721" name="command" value="replace">
           <label class="ml-3" for="m-repl-1721">Replace</label>
-          <input type="text" class="border rounded mx-1 w-40">
+          <input type="text" class="border rounded mx-1 w-40" name="m-replace-arg0">
           <span>(regex) by</span>
-          <input type="text" class="border rounded mx-1 w-40">
+          <input type="text" class="border rounded mx-1 w-40" name="m-replace-arg1">
           <span>using flags</span>
-          <input type="text" class="border rounded mx-1 w-20">
+          <input type="text" class="border rounded mx-1 w-20" name="m-replace-arg2">
         </div>
         <div class="block my-2">
           <input class="mt-1" type="radio" id="m-tran-1724" name="command" value="translate">
           <label class="ml-3" for="m-tran-1724">Translate the characters</label>
-          <input type="text" class="border rounded mx-1 w-40">
+          <input type="text" class="border rounded mx-1 w-40" name="m-translate-arg0">
           <span>to the characters</span>
-          <input type="text" class="border rounded mx-1 w-40">
+          <input type="text" class="border rounded mx-1 w-40" name="m-translate-arg1">
         </div>
       </fieldset>
-      <button type="button" class="button bg-blue-600 text-white font-bold rounded px-4 py-2 my-4">Get sed
+      <h2 class="mt-4 text-lg font-bold">Global Options</h2>
+      <fieldset class="border rounded p-2">
+        <legend>Regex Type</legend>
+        <div class="block my-2">
+          <input class="mt-1" type="radio" id="o-rbre-0055" name="regex-type" value="basic">
+          <label class="ml-3" for="o-rbre-0055">Basic Regular Expression (BRE)</label>
+        </div>
+        <div class="block my-2">
+          <input class="mt-1" type="radio" id="o-rere-0056" name="regex-type" value="extended">
+          <label class="ml-3" for="o-rere-0056">Extended Regular Expression (ERE)</label>
+        </div>
+      </fieldset>
+      <button type="button" class="button bg-blue-600 text-white font-bold rounded px-4 py-2 my-4" id="b-grsl-2348">Get sed
         command</button>
     </form>
     <div>
